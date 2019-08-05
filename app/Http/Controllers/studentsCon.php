@@ -53,9 +53,7 @@ class StudentsCon extends Controller
        
         $student=student::create(['name'=>request('name'),'degree'=>request('degree'),'subjectName'=>request('subjectName')]);
         $subject= subject::create(['subjectName'=>request('subjectName')]);
-        //$teacher=Teacher::create(['teacherName'=>request('teacherName')]);
         $student->subjects()->attach($subject);
-        //$student->teachers()->attach($teacher);
         return redirect('students');
         
     }

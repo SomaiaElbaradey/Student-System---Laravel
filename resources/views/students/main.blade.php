@@ -15,6 +15,9 @@
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Degree</th>
+                
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
                 <th scope="col">Subject</th>
                 </tr>
             </thead>
@@ -26,7 +29,9 @@
                         <td >{{$student->id}}</td>
                         <td >{{$student->name}}</td>
                         <td>{{$student->degree}}</td>
-                    
+                        <div class="update"> <td><a class="update" href="{{ url('students' . '/' . $student->id . '/edit') }}" class='float-right'>Update</a></td></div>
+                        <div class="delete"> <td><a class="delete"href="{{ url('students' . '/' . $student->id) }}" class='float-right'>Delete</a></td></div>
+
                         @foreach($student->subjects as $subject)
                             <td>{{ $subject->subjectName }}</td>
                         

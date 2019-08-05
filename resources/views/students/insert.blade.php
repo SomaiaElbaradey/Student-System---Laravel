@@ -24,8 +24,7 @@
                         <option name="subjectName" value="Mathmatics">Mathmatics</option>
                         <option name="subjectName" value="English">English</option>
                     </select>
-
-                    <input type="submit" name="send" value="save">
+                    <input type="submit" name="send" value="save" class="btn btn-info">
                     </form>
             
                     
