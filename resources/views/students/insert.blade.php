@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Student Data Insertion</div>
+                <div class="card-header">Add Student </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -17,12 +17,15 @@
                     @csrf
                     <input type="text" name="name" placeholder="Name">
                     <input type="text" name="degree"placeholder="Degree">
-          
-                    <input type="checkbox" name="subjectName" value="Physics"> Physics<br>
-                    <input type="checkbox" name="subjectName" value="Mathmatics">Mathmatics<br>
-                    <input type="checkbox" name="subjectName" value="English" >English<br>
 
-                    <input type="submit" name="send" value="send data">
+                    <select name="subjectName" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                        
+                        <option name="subjectName" value="Physics">Physics</option>
+                        <option name="subjectName" value="Mathmatics">Mathmatics</option>
+                        <option name="subjectName" value="English">English</option>
+                    </select>
+
+                    <input type="submit" name="send" value="save">
                     </form>
             
                     
