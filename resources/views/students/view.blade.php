@@ -10,17 +10,9 @@
                 
 
                 <div class="card-body">
-                    <h2>student Name: </h2>
+                <h3>student Name: </h3>
                     <p>{{ $student->name }}</p>
 
-                    <h3>student Belongs to</h3>
-
-                    <ul>
-                        @foreach($student->subjects as $subject)
-                        <li>{{ $subject->subjectName }}</li>
-                      
-                       
-                    </ul>
                     <a href="{{ url('students') }}" class='float-right'>Back</a></div>
                     <form class="d-inline" action="{{ url('students' . '/' . $student->id) }}" method="post">
                         @method('DELETE')
